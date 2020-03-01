@@ -65,4 +65,17 @@ public class TestHashSet {
 
         Assert.assertTrue(!(set.isEmpty()));
     }
+
+    @Test
+    public void testClear() {
+        HashSet<Person> set = new HashSet<>();
+        set.add(personOne);
+        set.add(personTwo);
+        set.clear();
+
+        Integer expected = 0;
+        Integer actual = set.size();
+
+        Assert.assertEquals(expected, actual);
+    }
 }
